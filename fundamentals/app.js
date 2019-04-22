@@ -1,11 +1,11 @@
 
 // odd or even
-let isOddOrEven = function(num) {
+function isOddOrEven(num) {
     return num % 2 == 0 ? 'even' : 'odd';
 }
 
 // find least
-let findLeastAndGreatest = function(nums) {
+function findSmallerAndLarger(nums) {
     if (nums === undefined || nums.length == 0) {
         return 'argument is required';
     }
@@ -38,7 +38,7 @@ let findLeastAndGreatest = function(nums) {
 }
 
 // palindrome
-let isPalindrome = function(word) {
+function isPalindrome(word) {
     if (word === null || word === undefined || word.length == 0) {
         return false;
     }
@@ -57,7 +57,7 @@ let isPalindrome = function(word) {
 
 
 // basic sort given array of nums and sort direction
-let doBasicSort = function(nums, asc) {
+function doBasicSort(nums, asc) {
 
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
@@ -72,6 +72,19 @@ let doBasicSort = function(nums, asc) {
     return nums;
 }
 
-
+// power of 2
+function powerOfTwo(n) {
+    // if (n == 0) 
+    //     return false; 
+          
+    // while (n != 1) { 
+    //     if (n % 2 != 0) 
+    //         return false; 
+    //     n = n / 2; 
+    // } 
+    // return true; 
+    let log = Math.log2(n);
+    return Math.ceil(log) === Math.floor(log);
+}
 
 
