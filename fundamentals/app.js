@@ -43,13 +43,11 @@ function isPalindrome(word) {
         return false;
     }
 
-    let reversedWordArray = new Array();
+    let reversedWordString = "";
 
     for (let i = word.length - 1; i >= 0; i--) {
-        reversedWordArray.push(word.charAt(i));
+        reversedWordString+=word[i];
     }
-    
-    let reversedWordString = reversedWordArray.join("");
     
     return {reversedWord: reversedWordString, palindrome: word === reversedWordString};
     // return word === word.split("").reverse().join("");
